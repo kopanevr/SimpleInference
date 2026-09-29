@@ -8,13 +8,13 @@ target_include_directories(
 target_include_directories(
   Inference PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include
-  ${CMAKE_SOURCE_DIR}/src/Application/Subsystems/Subsystem/include
-  ${CMAKE_SOURCE_DIR}/src/Application/Subsystems/Logger/include
-  ${CMAKE_SOURCE_DIR}/src/Application/Subsystems/EventDispatcher/include
-  ${CMAKE_SOURCE_DIR}/src/Application/Subsystems/FrameCapture/include
+  ${CMAKE_SOURCE_DIR}/src/Subsystems/Subsystem/include
+  ${CMAKE_SOURCE_DIR}/src/Subsystems/Logger/include
+  ${CMAKE_SOURCE_DIR}/src/Subsystems/EventDispatcher/include
+  ${CMAKE_SOURCE_DIR}/src/Subsystems/FrameCapture/include
 )
 
-target_link_libraries(Inference PRIVATE ${CMAKE_SOURCE_DIR}/thirdParty/onnxruntime-linux-x64-1.29.1/lib/libonnxruntime.so)
+target_link_libraries(Inference PRIVATE ${CMAKE_SOURCE_DIR}/thirdParty/onnxruntime-linux-x64-1.30.1/lib/libonnxruntime.so)
 
 target_link_libraries(Inference PRIVATE Logger)
 target_link_libraries(Inference PRIVATE EventDispatcher)
